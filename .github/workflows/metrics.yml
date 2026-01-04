@@ -1,19 +1,19 @@
-name: Metrics
-on:
-  # Schedule daily updates
-  schedule: [{cron: "0 0 * * *"}]
-  # (optional) Run workflow manually
-  workflow_dispatch:
-  # (optional) Run workflow when pushing on master/main
-  push: {branches: ["master", "main"]}
-jobs:
-  update-readme-with-blog:
-    name: Update this repo's README with latest blog posts
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Pull in dev.to posts
-        uses: gautamkrishnar/blog-post-workflow@v1
-        with:
-          feed_list: https://gw59.github.io/blog/feed.xml
+# name: Metrics
+# on:
+#   # Schedule daily updates
+#   schedule: [{cron: "0 0 * * *"}]
+#   # (optional) Run workflow manually
+#   workflow_dispatch:
+#   # (optional) Run workflow when pushing on master/main
+#   push: {branches: ["master", "main"]}
+# jobs:
+#   update-readme-with-blog:
+#     name: Update this repo's README with latest blog posts
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
+#       - name: Pull in dev.to posts
+#         uses: gautamkrishnar/blog-post-workflow@v1
+#         with:
+#           feed_list: https://gw59.github.io/blog/feed.xml
